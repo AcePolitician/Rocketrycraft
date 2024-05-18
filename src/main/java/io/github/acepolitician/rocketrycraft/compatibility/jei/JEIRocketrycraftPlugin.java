@@ -1,6 +1,6 @@
-package acepolitician.rocketrycraft.core.compatibility.jei;
+package io.github.acepolitician.rocketrycraft.compatibility.jei;
 
-import acepolitician.rocketrycraft.Rocketrycraft;
+import io.github.acepolitician.rocketrycraft.Rocketrycraft;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IGuiHandlerRegistration;

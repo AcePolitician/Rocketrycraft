@@ -1,4 +1,4 @@
-package acepolitician.rocketrycraft;
+package io.github.acepolitician.rocketrycraft;
 
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
