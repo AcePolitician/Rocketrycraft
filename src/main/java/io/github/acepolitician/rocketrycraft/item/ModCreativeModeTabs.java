@@ -1,6 +1,7 @@
 package io.github.acepolitician.rocketrycraft.item;
 
 import io.github.acepolitician.rocketrycraft.Rocketrycraft;
+import io.github.acepolitician.rocketrycraft.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -17,13 +18,13 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(net.minecraft.world.level.block.Blocks.AIR))
                     .title(Component.translatable("itemGroup.rocketrycraft.blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
-
+                        output.accept(ModBlocks.STEEL_BLOCK.get());
                     })
                     .build());
 
     public static final RegistryObject<CreativeModeTab> ROCKETRYCRAFT_ITEMS = CREATIVE_MODE_TABS.register("rocketrycraft_items",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.STEEL_INGOT.get()))
+                    .icon(() -> new ItemStack(net.minecraft.world.level.block.Blocks.AIR))
                     .title(Component.translatable("itemGroup.rocketrycraft.items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.STEEL_INGOT.get());

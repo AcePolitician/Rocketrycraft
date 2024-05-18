@@ -1,6 +1,7 @@
 package io.github.acepolitician.rocketrycraft;
 
 import com.mojang.logging.LogUtils;
+import io.github.acepolitician.rocketrycraft.block.ModBlocks;
 import io.github.acepolitician.rocketrycraft.item.ModCreativeModeTabs;
 import io.github.acepolitician.rocketrycraft.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
@@ -19,6 +20,7 @@ public class Rocketrycraft {
 
         ModCreativeModeTabs.register(eventBus);
 
+        ModBlocks.register(eventBus);
         ModItems.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
