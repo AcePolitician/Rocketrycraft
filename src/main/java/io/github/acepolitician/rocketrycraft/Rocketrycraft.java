@@ -1,6 +1,8 @@
 package io.github.acepolitician.rocketrycraft;
 
 import com.mojang.logging.LogUtils;
+import io.github.acepolitician.rocketrycraft.item.ModCreativeModeTabs;
+import io.github.acepolitician.rocketrycraft.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -14,6 +16,10 @@ public class Rocketrycraft {
 
     public Rocketrycraft() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModeTabs.register(eventBus);
+
+        ModItems.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
