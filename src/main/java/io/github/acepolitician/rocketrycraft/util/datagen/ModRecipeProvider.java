@@ -28,14 +28,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //oreSmelting(consumer, STEEL_SMELTABLES, RecipeCategory.MISC, ModItems.STEEL_INGOT.get(), 0.7F, 100, "steel_ingot");
         //oreBlasting(consumer, STEEL_SMELTABLES, RecipeCategory.MISC, ModItems.STEEL_INGOT.get(), 0.7F, 100, "steel_ingot");
 
-        // Flint and Steel
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.FLINT_AND_STEEL, 9)
-                .requires(ModItems.STEEL_INGOT.get())
-                .requires(Items.FLINT)
-                .unlockedBy(getHasName(ModItems.STEEL_INGOT.get()), has(ModItems.STEEL_INGOT.get()))
-                .unlockedBy(getHasName(Items.FLINT), has(Items.FLINT))
-                .save(consumer);
-
         // Steel Block
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEEL_BLOCK.get())
                 .pattern("###")
