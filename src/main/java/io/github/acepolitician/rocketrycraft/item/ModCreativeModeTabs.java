@@ -18,6 +18,7 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(net.minecraft.world.level.block.Blocks.AIR))
                     .title(Component.translatable("itemGroup.rocketrycraft.blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.METAL_COMPRESSOR.get());
                         output.accept(ModBlocks.STEEL_BLOCK.get());
                     })
                     .build());

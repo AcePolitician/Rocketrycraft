@@ -22,6 +22,7 @@ public class ModBlockLootSubProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        this.dropSelf(ModBlocks.METAL_COMPRESSOR.get());
         this.dropSelf(ModBlocks.STEEL_BLOCK.get());
     }
 
