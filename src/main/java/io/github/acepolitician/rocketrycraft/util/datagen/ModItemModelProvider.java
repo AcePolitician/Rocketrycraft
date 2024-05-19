@@ -18,6 +18,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.STEEL_INGOT);
+        simpleItem(ModItems.STEEL_PLATE);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

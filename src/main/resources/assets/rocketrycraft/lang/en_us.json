@@ -2,5 +2,6 @@
     "block.rocketrycraft.steel_block": "Block of Steel",
     "itemGroup.rocketrycraft.blocks": "Rocketrycraft Blocks",
     "itemGroup.rocketrycraft.items": "Rocketrycraft Items",
-    "item.rocketrycraft.steel_ingot": "Steel Ingot"
+    "item.rocketrycraft.steel_ingot": "Steel Ingot",
+    "item.rocketrycraft.steel_plate": "Steel Plate"
 }

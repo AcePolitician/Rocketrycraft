@@ -28,6 +28,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("itemGroup.rocketrycraft.items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.STEEL_INGOT.get());
+                        output.accept(ModItems.STEEL_PLATE.get());
                     })
                     .build());
 
