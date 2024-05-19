@@ -8,11 +8,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Rocketrycraft.MODID);
+    public static final DeferredRegister<Item> __ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, Rocketrycraft.MODID);
 
-    public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> STEEL_INGOT = __ITEMS.register("steel_ingot", () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
+        __ITEMS.register(eventBus);
     }
 }
