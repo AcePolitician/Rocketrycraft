@@ -35,7 +35,7 @@ public class MetalCompressorBlockEntity extends BlockEntity implements MenuProvi
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
     protected final ContainerData data;
-    private int progress;
+    private int progress = 0;
     private int maxProgress = 100;
 
     public MetalCompressorBlockEntity(BlockPos pPos, BlockState pBlockState) {
@@ -138,7 +138,7 @@ public class MetalCompressorBlockEntity extends BlockEntity implements MenuProvi
     }
 
     private void craftItem() {
-        ItemStack result = new ItemStack(ModItems.STEEL_INGOT.get(), 1);
+        ItemStack result = new ItemStack(ModItems.STEEL_PLATE.get(), 1);
         this.itemHandler.extractItem(INPUT_SLOT, 1, false);
         this.itemHandler.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(), this.itemHandler.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount()));
     }

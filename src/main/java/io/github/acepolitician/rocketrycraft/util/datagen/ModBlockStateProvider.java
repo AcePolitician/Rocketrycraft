@@ -16,7 +16,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        simpleBlock(ModBlocks.METAL_COMPRESSOR.get(), new ModelFile.UncheckedModelFile(modLoc("block/metal_compressor")));
+        simpleBlockWithItem(ModBlocks.METAL_COMPRESSOR.get(), new ModelFile.UncheckedModelFile(modLoc("block/metal_compressor")));
         blockWithItem(ModBlocks.STEEL_BLOCK);
     }
 
