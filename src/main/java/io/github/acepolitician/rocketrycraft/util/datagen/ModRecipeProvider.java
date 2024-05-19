@@ -5,6 +5,7 @@ import io.github.acepolitician.rocketrycraft.block.ModBlocks;
 import io.github.acepolitician.rocketrycraft.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -27,6 +28,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //oreSmelting(consumer, STEEL_SMELTABLES, RecipeCategory.MISC, ModItems.STEEL_INGOT.get(), 0.7F, 100, "steel_ingot");
         //oreBlasting(consumer, STEEL_SMELTABLES, RecipeCategory.MISC, ModItems.STEEL_INGOT.get(), 0.7F, 100, "steel_ingot");
 
+        // Flint and Steel
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.FLINT_AND_STEEL, 9)
+                .requires(ModItems.STEEL_INGOT.get())
+                .requires(Items.FLINT)
+                .unlockedBy(getHasName(ModItems.STEEL_INGOT.get()), has(ModItems.STEEL_INGOT.get()))
+                .unlockedBy(getHasName(Items.FLINT), has(Items.FLINT))
+                .save(consumer);
+
+        // Steel Block
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEEL_BLOCK.get())
                 .pattern("###")
                 .pattern("###")
@@ -35,6 +45,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.STEEL_INGOT.get()), has(ModItems.STEEL_INGOT.get()))
                 .save(consumer);
 
+        // Steel Ingot
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STEEL_INGOT.get(), 9)
                 .requires(ModBlocks.STEEL_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.STEEL_BLOCK.get()), has(ModBlocks.STEEL_BLOCK.get()))
